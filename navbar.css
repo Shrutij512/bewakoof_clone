@@ -1,0 +1,105 @@
+*{
+    font-family: montserrat,sans-serif;;
+}
+.navbar{
+    position: sticky;
+}
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px 6px 0px;
+    margin: -11px -8px 0px -8px;
+    background-color: rgb(232, 231, 231);
+    font-size: 10px;
+    font-weight: 500;
+}
+.nav1-1 a , .nav1-2 a{
+    text-decoration: none;
+    color: rgb(59, 57, 57);
+    margin: 0px 10px;
+}
+.nav1-1 a:hover , .con1-2 a:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.nav2{
+    display: flex;
+    justify-content: space-around;
+    height: 48px;
+    margin: 0px -8px;
+}
+.nav2 >img{
+    margin: 13px 0px 14px 60px;
+}
+.nav2-1{
+      margin: 15px 0px 12px 0px;
+}
+.nav2-1 a{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: black;
+}
+.nav2-1 a ,nav2-2 a:hover{
+    cursor: pointer;
+}
+.nav2-2{
+    margin: 7px 0px 0px 0px;
+}
+input{
+    font-size: 12px;
+    padding: 12px 5px 9px 5px;
+    border-radius: 5px;
+    background-color: rgb(235, 237, 238);
+    border: 0;
+    width: 237px;
+}
+.nav2-2 a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px 0px 2px;
+}
+span{
+    font-size:25px;
+    margin: 2px 8px;
+    color: rgb(209, 213, 213);
+}
+hr{
+    margin: 2px -8px 0px -8px;
+    border: 1px solid rgb(213, 209, 209);
+    background-color: rgb(211, 210, 210);
+}
+.nav3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70px;
+    margin: 0px -8px;
+   
+}
+.nav3 a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+@media only screen and (max-width: 1000px) {
+    .nav1{
+        display: none;
+    }
+    .nav2{
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .nav1{
+        display: none;
+    }
+   .nav2{
+        display: none;
+    }
+    .nav3{ 
+       display: flex;
+       flex-wrap: wrap;
+    }
+}
