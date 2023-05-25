@@ -1,0 +1,76 @@
+.container{
+    margin-top: 40px;
+    width:100%;
+    height: 800px;
+    display:flex;
+}
+.container>#login_image{
+    margin-top: 150px;
+    margin-left: 250px;
+    width:25%;
+    height:70%;
+}
+.container>div{
+    width: 40%;
+    height:700px;
+    background-color: white;
+    margin: auto;
+}
+.container>div>h1{
+    margin: auto;
+    width: 60%;
+    margin-top: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+.conatainer>div>h2{
+    margin: auto;
+    margin-top: 29px;
+    color: black;
+    width: 60%;
+    line-height: 27px;
+    text-align: left;
+}
+#show_num{
+    margin: 20px;
+    color: teal;
+    font-weight: bold;
+    text-align: center;
+}
+form{
+    margin: auto;
+    margin-left: 130px;
+}
+form input{
+    margin-top: 20px;
+    width:70%;
+    height:50px;
+    font-size: 22px;
+    border-color: black;
+}
+#label_check{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+#wrong_pass{
+    color: red;
+    margin-top: 10px;
+}
+#btn_signup{
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 25px;
+    background-color: grey;
+    border-radius: 8px;
+    margin-top: 20px;
+
+}
+#checkbox{
+    height: 25px;
+    width: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 120px;
+}
