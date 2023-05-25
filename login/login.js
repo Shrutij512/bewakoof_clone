@@ -40,7 +40,7 @@ function checkno( loadVal,no) {
                 number: no
             }
             noarr.push(obj)
-            localStorage.setItem("mobile_no", JSON.stringify(noarr))
+            localStorage.setItem("phone_no", JSON.stringify(noarr))
             window.location.href = "otp.html"
            let x=  document.getElementById("show_wrong_p");
            x.innerText = "Enter otp"
@@ -50,7 +50,7 @@ function checkno( loadVal,no) {
                 number: no
             }
             noarr.push(obj)
-            localStorage.setItem("mobile_no", JSON.stringify(noarr))
+            localStorage.setItem("phone_no", JSON.stringify(noarr))
 
             window.location.href = "signup.html"
             let x=  document.getElementById("show_wrong_p");
