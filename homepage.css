@@ -1,0 +1,189 @@
+
+.hom1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 2px solid red;
+}
+.hom1 img{
+    width: 100%;
+}
+/* .hom1 img{
+    height: 400px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+.hom1-dot{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+} */
+/* .lab{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+    border: 2px solid grey;
+}  */
+
+
+.hom2{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    margin: 15px 5px 25px 5px;
+}
+.hom2 img{
+    width: 100%;
+}
+.hom2 p{
+   text-align: center;
+    font-family: montserrat,sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+   color: black;
+}
+.hom2 a{
+    text-decoration: none;
+}
+
+.hom3 img{
+    width: 100%;
+}
+
+.hom4 p{
+    text-align: center;
+    font-family: montserrat,sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+}
+
+.hom5{
+    display: flex;
+}
+.hom5 img{
+    width: 100%;
+}
+
+.hom6 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hom7-1{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom7-2{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom7-1 img , .hom7-2 img{
+    width: 100%;
+}
+
+.hom8 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hom9-1 ,.hom9-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+} 
+.hom9-1 img ,.hom9-2 img{
+    width: 98%;
+    height: 96%;
+}
+
+.hom10 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.hom11{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom11 img{
+    width: 100%;
+}
+
+.hom12 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.hom13{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom13 img{
+    width: 100%;
+}
+
+.hom14 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.hom15-1 ,.hom15-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+} 
+.hom15-1 img ,.hom15-2 img{
+    width: 98%;
+    height: 98%;
+}
+
+@media only screen and (max-width: 800px) {
+    .hom2{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .hom2{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .hom7-1{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .hom7-2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .hom11{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .hom13{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media only screen and (max-width: 425px) {
+    .hom2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
