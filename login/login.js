@@ -1,13 +1,13 @@
 
 let loadVal = JSON.parse(localStorage.getItem("userdetails"))
-let noarr = JSON.parse(localStorage.getItem("mobile_no")) || [];
+let noarr = JSON.parse(localStorage.getItem("phone_no")) || [];
 document.querySelector("#cont_btn").addEventListener("click", myfunction);
 function myfunction() {
 
     let no = document.getElementById("input_for_no").value;
 
     if (no == "") {
-        document.getElementById("mobile_no").style.border = "1px solid red"
+        document.getElementById("phone_no").style.border = "1px solid red"
         document.getElementById("show_wrong_p").innerText = "Mobile Number is required"
     }
     else {
@@ -17,7 +17,7 @@ function myfunction() {
                 number: no
             }
             noarr.push(obj)
-            localStorage.setItem("mobile_no", JSON.stringify(noarr))
+            localStorage.setItem("phone_no", JSON.stringify(noarr))
             window.location.href = "signup.html"
         }
 
