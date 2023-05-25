@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/17cb428520.js" crossorigin="anonymous"></script>
     <title>Payment</title>
     <link rel="stylesheet" href="./paymentStyle.css">
 </head>
@@ -13,57 +14,72 @@
 
     </div>
 </body>
-<div>
-    <div>
-        <h4> Add New Address</h4>
-    </div>
+<div id="box">
     <form action="" id="form">
-        <div class="info">
-            <label for="">Full Name</label><br>
-            <input type="text" class="input">
+        <div id="header">
+            <i class="fa-solid fa-chevron-left"></i>
+            <h4> Add New Address</h4>
         </div>
-        <div class="info">
-            <label for="">Mobile Number</label> <br>
-            <input type="number">
-        </div>
-        <hr>
-        <div class="info">
-            <label for="">Pincode / Postal Code / Zipcode</label><br>
-            <input type="text">
-        </div>
-        <div class="info" id="city">
-            <div>
-                <label for="">City</label> <br>
-                <input type="text">
+        <div id="insideBox">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="info" style="cursor: not-allowed;">
+                <input type="text" class="input" style="cursor: not-allowed;">
+                <div id="country " style="display: flex;">
+                    <span id="image"> 
+                    <img 
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgAv22s8dLybB0Je3uenK_2-fwSikQZ3KTRA&usqp=CAU" 
+                    alt="flag">
+                   </span>
+                    <span class="place">India</span>
+                </div>
             </div>
-            <div>
-                <label for="">State</label> <br>
-                <input type="text">
+            <div class="info">
+                <input type="text" class="input">
+                <span class="place">Full Name</span>
             </div>
-        </div>
-        <div class="info">
-            <label for="">Flate no./Building,Street name</label><br>
-            <input type="text">
-        </div>
-        <div class="info">
-            <label for="">Area/Locality</label><br>
-            <input type="text">
-        </div>
-        <div class="info">
-            <label for="">Landmark(optional)</label><br>
-            <input type="text">
-        </div>
-        <div id="add">
-            <span>Add Address as</span>
-            <div>
-                <div class="addType">Home</div>
-                <div class="addType">Office</div>
-                <div class="addType">Other</div>
+            <div class="info">
+                <input type="number" class="input">
+                <span class="place">Mobile no.</span>
             </div>
-        </div>
-        <div id="submit">
-            <button id="savingAdd">Save Address</button>
-            <button id="cancelAdd">Cancel</button>
+            <hr>
+            <div class="info" style="margin-top: 30px;">
+                <input type="text" class="input">
+                <span class="place">Pincode / Postal Code / Zipcode</span>
+            </div>
+            <div class="info" id="city">
+                <div>
+                    <input type="text" class="input">
+                    <span class="place">City</span>
+                </div>
+                <div>
+                    <input type="text" class="input">
+                    <span class="place">State</span>
+                </div>
+            </div>
+            <div class="info">
+                <input type="text" class="input">
+                <span class="place">Flat no./Building,Street name</span>
+            </div>
+            <div class="info">
+                <input type="text" class="input">
+                <span class="place">Area/Locality</span>
+            </div>
+            <div class="info">
+                <input type="text" class="input">
+                <span class="place">Landmark(optional)</span>
+            </div>
+            <div id="add">
+                <span>Save Address as</span>
+                <div>
+                    <div class="addType">Home</div>
+                    <div class="addType">Office</div>
+                    <div class="addType">Other</div>
+                </div>
+            </div>
+            <div id="submit">
+                <button id="savingAdd">Save Address</button>
+                <button id="cancelAdd">Cancel</button>
+            </div>
         </div>
 </div>
 </form>

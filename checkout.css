@@ -1,0 +1,17 @@
+#checkoutHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: -20px 70px;
+    margin-top: 10px;
+    height: 60px;
+}
+
+#checkoutHeader img {
+    height: 30px;
+    padding: 2px;
+}
+
+#checkoutPayment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
