@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Fashion Shopping for Men,Women,Accessories-Bewakoof.com</title>
     <link rel="stylesheet" href="otp.css">
 
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
 
 <div>
     <h1>Verify with OTP</h1>
@@ -30,8 +30,8 @@
 
 </body>
 <script>
-        let loadno = JSON.parse(localStorage.getItem("mobile_no"));
-    let Namearr = JSON.parse(localStorage.getItem("username")) || [];
+        var loadno = JSON.parse(localStorage.getItem("mobile_no"));
+    var Namearr = JSON.parse(localStorage.getItem("username")) || [];
       for(let i=0;i<loadno.length;i++){
         document.getElementById("show_no").innerText= loadno[loadno.length-1].number;
       } 
@@ -39,13 +39,13 @@
 
 document.querySelector("#log_btn").addEventListener("click",usercheck)
 function usercheck(){
-let otp=document.getElementById("enter_otp").value;
+var otp=document.getElementById("enter_otp").value;
 checklog(infoArr,otp)
 }
 function checklog(infoArr,otp){
     infoArr.map(function(ele){
 if(otp==ele.password){
-   let obj={
+   var obj={
     "name":ele.name
    }
    Namearr.push(obj)
@@ -54,7 +54,7 @@ if(otp==ele.password){
     return alert("All Set!,Enjoy Shopping")
    
 }else{
-    let x= document.getElementById("show_wrong_otp");
+    var x= document.getElementById("show_wrong_otp");
            x.innerText = "Wrong OTP";
            x.style.color="red";
 }

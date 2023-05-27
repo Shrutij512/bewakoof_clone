@@ -55,12 +55,12 @@
 </body>
 <script>
   
-  let loadVal = JSON.parse(localStorage.getItem("userdetails"))
-    let noarr = JSON.parse(localStorage.getItem("mobile_no")) || [];
+  var loadVal = JSON.parse(localStorage.getItem("userdetails"))
+    var noarr = JSON.parse(localStorage.getItem("mobile_no")) || [];
     document.querySelector("#cont_btn").addEventListener("click", myfunction);
     function myfunction() {
 
-        let no = document.getElementById("input_for_no").value;
+        var no = document.getElementById("input_for_no").value;
 
         if (no == "") {
             document.getElementById("mobile_no").style.border = "1px solid red"
@@ -69,7 +69,7 @@
         else {
 
             if (loadVal == null) {
-                let obj = {
+                var obj = {
                     number: no
                 }
                 noarr.push(obj)
@@ -92,24 +92,24 @@
 
             if (no == elem.mobile) {
                
-                let obj = {
+                var obj = {
                     number: no
                 }
                 noarr.push(obj)
                 localStorage.setItem("mobile_no", JSON.stringify(noarr))
                 window.location.href = "otp.html"
-               let x=  document.getElementById("show_wrong_p");
+               var x=  document.getElementById("show_wrong_p");
                x.innerText = "Enter otp"
             } else {
                
-                let obj = {
+                var obj = {
                     number: no
                 }
                 noarr.push(obj)
                 localStorage.setItem("mobile_no", JSON.stringify(noarr))
 
                 window.location.href = "signup.html"
-                let x=  document.getElementById("show_wrong_p");
+                var x=  document.getElementById("show_wrong_p");
                x.innerText = "New User Sign Up first"
                
 
