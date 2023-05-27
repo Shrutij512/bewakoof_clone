@@ -46,7 +46,7 @@ form input{
     width:70%;
     height:50px;
     font-size: 22px;
-    border-color: black;
+    
 }
 #label_check{
     display: flex;
