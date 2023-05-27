@@ -60,7 +60,13 @@
 }
 
 input:focus+.place {
-    top: -50px;
+    top: -45px;
+    font-size: 14px;
+    color: black;
+}
+
+input:focus+.place {
+    top: -45px;
     font-size: 14px;
     color: black;
 }
@@ -75,7 +81,11 @@ input:focus+.place {
 
 #city div {
     width: 100%;
-    margin: 0px 10px;
+    margin: 0;
+}
+
+#cityName {
+    margin-right: 10px!important;
 }
 
 #city input {

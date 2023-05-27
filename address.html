@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/17cb428520.js" crossorigin="anonymous"></script>
-    <title>Payment</title>
-    <link rel="stylesheet" href="./paymentStyle.css">
+    <title>Address</title>
+    <link rel="stylesheet" href="./address.css">
 </head>
 
 <body>
@@ -34,38 +34,38 @@
                 </div>
             </div>
             <div class="info">
-                <input type="text" class="input">
+                <input type="text" class="input" id="fullName">
                 <span class="place">Full Name</span>
             </div>
             <div class="info">
-                <input type="number" class="input">
+                <input type="text" class="input" id="mobileNum">
                 <span class="place">Mobile no.</span>
             </div>
             <hr>
             <div class="info" style="margin-top: 30px;">
-                <input type="text" class="input">
+                <input type="text" class="input" id="pincode">
                 <span class="place">Pincode / Postal Code / Zipcode</span>
             </div>
             <div class="info" id="city">
-                <div>
-                    <input type="text" class="input">
+                <div id="cityName">
+                    <input type="text" class="input" id="City">
                     <span class="place">City</span>
                 </div>
-                <div>
-                    <input type="text" class="input">
+                <div id="state">
+                    <input type="text" class="input" id="State">
                     <span class="place">State</span>
                 </div>
             </div>
             <div class="info">
-                <input type="text" class="input">
+                <input type="text" class="input" id="flatNo">
                 <span class="place">Flat no./Building,Street name</span>
             </div>
             <div class="info">
-                <input type="text" class="input">
+                <input type="text" class="input" id="area">
                 <span class="place">Area/Locality</span>
             </div>
             <div class="info">
-                <input type="text" class="input">
+                <input type="text" class="input" id="landmark">
                 <span class="place">Landmark(optional)</span>
             </div>
             <div id="add">
@@ -85,3 +85,5 @@
 </form>
 
 </html>
+
+<script src="./scripts/address.js"></script>

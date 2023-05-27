@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/17cb428520.js" crossorigin="anonymous"></script>
     <title>Checkout</title>
     <link rel="stylesheet" href="./checkout.css">
 </head>
@@ -22,73 +23,155 @@
     <div id="checkoutPayment">
         <div id="left">
             <p> Choose your payment method</p>
-            <div id="payType">
-                <div id="pay1">
-                    <img src="https://images.bewakoof.com/web/bank-card-fill-1645697857.svg" alt="debit">
-                    <span>Debit & Credit Card</span>
-                </div>
-                <div id="pay2">
-                    <img src="https://images.bewakoof.com/web/Group-1645705428.png" alt="wallet">
-                    <span>Wallet</span>
-                </div>
-                <div id="pay3">
-                    <img src="https://images.bewakoof.com/web/upi-icon-1645705429.png" alt="upi">
-                    <span>UPI</span>
-                </div>
-                <div id="pay4">
-                    <img src="https://images.bewakoof.com/web/nb-icon-1645705428.png" alt="Net banking">
-                    <span>Net banking</span>
-                </div>
-                <div id="pay5">
-                    <img src="https://images.bewakoof.com/web/cod-icon-1645705427.png" alt="COD">
-                    <span>Cash On Delivery</span>
-                </div>
-            </div>
-            <div>
-                <div id="payType1">
-                    <div id="cardImages">
-                        <img src="https://images.bewakoof.com/web/ic-visa-gray-payment-v1.jpg" alt="visa">
-                        <img src="https://images.bewakoof.com/web/ic-master-card-payment-v1.jpg" alt="master">
-                        <img src="https://images.bewakoof.com/web/ic-rupay-payment-v1.jpg" alt="rupay">
-                        <img src="https://images.bewakoof.com/web/ic-american-express-payment-v1.jpg" alt="american">
+            <div id="parent">
+                <div id="payType">
+                    <div class="payType" id="btn" onclick="">
+                        <img src="https://images.bewakoof.com/web/bank-card-fill-1645697857.svg" alt="debit">
+                        <span>Debit & Credit Card</span>
                     </div>
-                    <div id="cardInfo">
-                        <div class="carddetails">
-                            <input type="text">
-                            <span>Card Number</span>
-                        </div>
-                        <div class="carddetails">
-                            <div>
-                                <input type="date">
-                                <span>Valid through(MM/YY)</span>
-                            </div>
-                            <div>
-                                <input type="text">
-                                <span>CVV</span>
-                            </div>
-                        </div>
-                        <div class="carddetails">
-                            <input type="text">
-                            <span>Name On Card</span>
-                        </div>
+                    <div class="payType">
+                        <img src="https://images.bewakoof.com/web/Group-1645705428.png" alt="wallet">
+                        <span>Wallet</span>
+                    </div>
+                    <div class="payType">
+                        <img src="https://images.bewakoof.com/web/upi-icon-1645705429.png" alt="upi">
+                        <span>UPI</span>
+                    </div>
+                    <div class="payType">
+                        <img src="https://images.bewakoof.com/web/nb-icon-1645705428.png" alt="Net banking">
+                        <span>Net banking</span>
+                    </div>
+                    <div class="payType">
+                        <img src="https://images.bewakoof.com/web/cod-icon-1645705427.png" alt="COD">
+                        <span>Cash On Delivery</span>
                     </div>
                 </div>
-                <div id="payType2">
+                <div>
+                    <div class="payDesc">
+                        <div id="cardImages">
+                            <img src="https://images.bewakoof.com/web/ic-visa-gray-payment-v1.jpg" alt="visa">
+                            <img src="https://images.bewakoof.com/web/ic-master-card-payment-v1.jpg" alt="master">
+                            <img src="https://images.bewakoof.com/web/ic-rupay-payment-v1.jpg" alt="rupay">
+                            <img src="https://images.bewakoof.com/web/ic-american-express-payment-v1.jpg" alt="american">
+                        </div>
+                        <div id="cardInfo">
+                            <div class="carddetails">
+                                <!-- <span class="insider">Card Number</span> -->
+                                <input type="text" placeholder="Card Number">
+                            </div>
+                            <div class="carddetails" id="second">
+                                <div>
+                                    <!-- <span class="insider">Valid through(MM/YY)</span> -->
+                                    <input type="text" placeholder="Valid through(MM/YY)">
+                                </div>
+                                <div>
+                                    <!-- <span class="insider">CVV</span> -->
+                                    <input type="text" placeholder="CVV">
+                                </div>
+                            </div>
+                            <div class="carddetails">
+                                <!-- <span class="insider">Name On Card</span> -->
+                                <input type="text" placeholder="Name On Card">
+                            </div>
+                            <div id="tick">
+                                <i class="fa-solid fa-square-check"></i>
+                                <span>Save card details for later</span>
+                            </div>
+                            <p>This transaction you make is totally secure. We don't save your CVV number.</p>
+                            <button id="pay">Pay</button>
+                        </div>
+                    </div>
+                    <!-- <div id="payType2">
 
-                </div>
-                <div id="payType3">
+                    </div>
+                    <div id="payType3">
 
-                </div>
-                <div id="payType4">
+                    </div>
+                    <div id="payType4">
 
-                </div>
-                <div id="payType5">
+                    </div>
+                    <div id="payType5">
 
+                    </div> -->
                 </div>
             </div>
         </div>
-        <div id="right"> 2</div>
+        <hr style="transform: rotate(90 deg);">
+        <div id="right">
+            <div id="address">
+                <div>
+                    <span id="tag">Delivering order to</span>
+                    <span id="name"></span>
+                </div>
+                <div>
+                    <span id="address1"></span>
+                    <span id="address2"></span>
+                </div>
+            </div>
+            <hr>
+            <div id="products"></div>
+            <hr>
+            <div id="summary"></div>
+            <hr>
+            <div id="final">
+                <h3>Price Summary</h3>
+                <div class="price">
+                    <div>
+                        <span>Total MRP(Inc. of taxes)</span>
+                        <span>&#8377</span>
+                    </div>
+                    <div class="price">
+                        <span>Shipping Charges </span>
+                        <span>FREE</span>
+                    </div>
+                    <div class="price">
+                        <span>Discount on MRP</span>
+                        <span>- &#8377</span></div>
+                </div>
+                <hr>
+                <div class="price">
+                    <span>Final Amount</span>
+                    <span>&#8377</span>
+                </div>
+            </div>
+            <div id="bottom">
+                <div class="flexContent">
+                    <div>
+                        <img src="https://images.bewakoof.com/web/cart-badge-trust.svg" alt="1" style="width: 28px;">
+                        <span>100% SECURE PAYMENTS</span>
+                    </div>
+                    <div>
+                        <img src="https://images.bewakoof.com/web/frame-easy-trust.svg" alt="2">
+                        <span>EASY RETURNS & INSTANT REFUNDS
+                        </span>
+                    </div>
+                    <div>
+                        <img src="https://images.bewakoof.com/web/Globe-gray-badge.svg" alt="3">
+                        <span>SHIPPING GLOBALLY</span>
+                    </div>
+                    <hr>
+
+                </div>
+                <div class="flexContent">
+                    <div>
+                        <img src="https://images.bewakoof.com/web/google-pay-logo.svg" alt="gpay">
+                    </div>
+                    <div>
+                        <img src="https://images.bewakoof.com/web/upi-sign.svg" alt="upi">
+                    </div>
+                    <div>
+                        <img src="https://images.bewakoof.com/web/phone-pay-logo.svg" alt="phone-pay-logo">
+                    </div>
+                    <div>
+                        <img src="https://images.bewakoof.com/web/visa-card-logo-9.svg" alt="visa-card-logo">
+                    </div>
+                    <div><img src="https://images.bewakoof.com/web/master-card.svg" alt="master-card">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 </html>
+<script src="./scripts/checkout.js"></script>
