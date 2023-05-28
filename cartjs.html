@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <h1 id="">hhh</h1>
+   
+</body>
+</html>
+<script>
+    var cart=JSON.parse(localStorage.getItem("wishlist")) ||[];
+    console.log("cart",cart)
+
+   let discounted_price =cart.discounted_price;
+   console.log(discounted_price);
+
+   cart.map(function(item){
+    console.log(item.discounted_price)
+    let img = document.createElement("img");
+  img.src = item.image;
+  img.style.maxHeight = "10%";
+  img.style.width = "10%";
+
+document.getElementById("container").append(img)
+   })
+
+   
+        
+    
+
+    
+
+
+</script>

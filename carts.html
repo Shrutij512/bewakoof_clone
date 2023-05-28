@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="cartpage-total-div">
+
+        <div id="cart-head-const">
+            <a href="./index.html"></a>
+            <span>Signed as:<p id="logedin-email"></p></span>
+        </div>
+
+        <p id="total-items-cart">My Bag 0 item(s)</p>
+        <div id="cart-append-change">
+            <div id="cart-shown-images">
+
+
+
+
+                <div id="cart-shown-left">
+
+                    <div class="offer-div" id="left-offer-color">
+
+                        <p> <span><img class="truckmove" src="https://images.bewakoof.com/web/Red-truck.png" alt="truck"
+                                    style="width: 19px; height: 12px; animation-duration: 2s;"></span>Yay! You get FREE
+                            delivery on this order</p>
+
+                    </div>
+                    <div id="cart-dom-clear">
+
+                        <div id="cart-push-prdt">
+
+                            <div id="cart-descr-img">
+                                <div id="cart-descr">
+                                    <p>Know Your Power Boyfriend T-Shirt</p>
+                                    <p id="actual_price">₹0 <span id="mrp-price"></span></p>
+                                    <div>
+                                        <p class="green-color">You saved ₹<span id="saved-amt">0</span>!</p>
+                                    </div>
+
+                                    <div id="size-qty">
+                                        <div id="size">
+                                            <!-- select start  -->
+                                            <select id="select-value">
+                                                <option>size:</option>
+                                                <option>Xs</option>
+                                                <option>S</option>
+                                                <option>M</option>
+
+                                                <option>L</option>
+
+                                                <option>XL</option>
+                                                <option>2XL</option>
+                                                <option>7</option>
+                                                <option>3XL</option>
+
+
+
+                                            </select>
+                                            <!-- select end  -->
+                                        </div>
+                                        <div id="qty">
+                                            <!-- qty start  -->
+                                            <select>
+                                                <option>quantity:</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+
+                                                <option>4</option>
+
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+
+                                                <option>9</option>
+
+                                                <option>10</option>
+
+                                            </select>
+                                            <!-- qty end  -->
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="cart-img">
+                                    
+                                </div>
+                            </div>
+                            <!-- cart-desc-img-end -->
+                            <hr>
+                            <div id="remove-wishlist">
+
+                                <div>Remove</div>
+
+                                <div>Move to Wishlist</div>
+                            </div>
+
+                        </div>
+                        <!-- cart-push-prdt end -->
+                    </div>
+
+                    <div id="wishlist-container"></div>
+
+
+                </div>
+                <div id="cart-shown-right">
+
+                    <div class="offer-div" id="offer-div">
+                        <p>Save extra ₹52 with TriBe</p>
+
+                    </div>
+                    <div class="offer-div" id="grey-border">
+                        <p>Get Rs.100 instant discount on your First Purchase above Rs.499. Coupon code
+                            - NEW100</p>
+                    </div>
+                    <div id="border-grey">
+                        <div class="referal-redeem">
+                            <div>
+                                <div id="Coupon-btn">
+
+                                    Have a Coupon / Referral / Gift Card ?</div>
+                                <div>Redeem >></div>
+                            </div>
+
+
+                        </div>
+                        <div>
+
+                            <div id="cont-price-summ" class="offer-div">PRICE SUMMARY</div>
+                            <div id="price-summary">
+                                <div>
+                                    <p>Total MRP (Incl. of taxes)</p>
+                                    <p>Delivery Fee </p>
+                                    <p>Bag Discount </p>
+                                    <p>Subtotal </p>
+                                </div>
+                                <div>
+                                    <p class="total_calculate_price">null</p>
+                                    <p class="green-color">FREE</p>
+                                    <p class="bag-discount">0</p>
+                                    <p class="Subtotal"></p>
+                                </div>
+
+                            </div>
+                            <div class="offer-div" id="saving-div">You are saving ₹52 on this order</div>
+                            <div id="Total-amount-address">
+                                <div>
+                                    <p>Total</p>
+                                    <p class="Grand-total-pay">0</p>
+                                </div>
+                                <div>
+                                      <a href="addcart.html">
+                                         <button id="adress-payment-btn">Continue</button>
+                                      </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div id="payment_secure">
+                <img src="https://images.bewakoof.com/web/secure-payments-image.png">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+
+
+var cart=JSON.parse(localStorage.getItem("wishlist")) ||[];
+    console.log("cart",cart)
+
+   let discounted_price =cart.discounted_price;
+   console.log(discounted_price);
+
+
+
+
+
+
+
+
+
+   cart.map(function(item){
+
+   const totalprice= cart.reduce(function(a,b){
+        return a + Number(b.discounted_price);
+
+    },0)
+
+  let total=  document.querySelector(".Grand-total-pay")
+  total.innerHTML=totalprice
+
+
+    console.log(item.discounted_price)
+    let img = document.createElement("img");
+  img.src = item.image;
+  img.style.maxHeight = "90%";
+  img.style.width = "auto%";
+
+document.getElementById("cart-img").append(img)
+   })
+
+
+</script>
