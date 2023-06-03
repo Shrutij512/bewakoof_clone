@@ -1,0 +1,40 @@
+#container{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   padding-left: -100px;
+   padding-right: -100px;
+    
+}
+#container input{
+    border: none;
+    padding-top: -20px;
+}
+#parent{
+    text-align: center;
+    margin-top: 40px;
+    
+}
+#parent h2{
+    font-size: 24px;
+}
+
+.bag{
+    width: 10%;
+}
+#parent button{
+    cursor: pointer;
+    color: rgb(13, 81, 81);
+    background-color: #fff;
+    font-size: large;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+#parent div{
+    margin-top: 20px;
+}
+
+
+
