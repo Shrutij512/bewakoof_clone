@@ -1,6 +1,6 @@
 
 
-var products=[  
+var mproducts=[  
     {
         image_url:"https://images.bewakoof.com/t1080/men-s-brown-smiling-cat-graphic-printed-oversized-t-shirt-592490-1684486405-1.jpg",
         product_info:"Men's Brown Smiling Cat Graphic Printed Oversized T-shirt",
@@ -285,18 +285,24 @@ var products=[
     }
 ];
 
-localStorage.setItem("all_products",JSON.stringify(products));
+localStorage.setItem("all_products",JSON.stringify(mproducts));
 
-console.log(products);
+console.log(mproducts);
 
-displayProducts(products);
+displayProducts(mproducts);
 
 function displayProducts(arr){
     // event.preventDefault();
 
     arr.map(function(el){
+        
         var box=document.createElement("div");
         box.setAttribute("id","box");
+        
+        var a=document.createElement("a");
+        a.href="details.html";
+        
+        
 
         var div1=document.createElement("div");
         
@@ -361,7 +367,8 @@ function displayProducts(arr){
         d4.textContent="100% COTTON";
         div4.append(d4);
 
-        box.append(image,div1,div2,div3,div4);
+        a.append(image,div1,div2,div3,div4);
+        box.append(a)
         document.getElementById("productflex").append(box);
     });
 }
@@ -380,4 +387,5 @@ let listElements=document.querySelectorAll(".link");
         })
     })
 
-document.getElementById("prod_count").textContent="("+products.length+")";
+document.getElementById("prod_count").textContent="("+mproducts.length+")";
+
