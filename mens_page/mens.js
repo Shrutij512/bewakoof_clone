@@ -28,7 +28,7 @@ var mproducts=[
         image5_url:"https://images.bewakoof.com/t1080/men-s-grey-smiling-cat-graphic-printed-oversized-t-shirt-594324-1684956332-6.jpg",
         image6_url:"https://images.bewakoof.com/t1080/men-s-grey-smiling-cat-graphic-printed-oversized-t-shirt-594324-1684956337-7.jpg",
         rating:0,
-        registered:"OFFICIAL GARFIELD MERCHANDISE",
+        registered:"GARFIELD MERCHANDISE",
     },  {
         image_url:"https://images.bewakoof.com/t1080/feel-most-alive-half-sleeve-t-shirt-navy-blue-307089-1655748632-1.jpg",
         product_info:"Feel Most Alive Half Sleeve T-Shirt Navy Blue",
@@ -281,7 +281,7 @@ var mproducts=[
         image5_url:"https://images.bewakoof.com/t1080/men-s-grey-ultimate-warrior-graphic-printed-oversized-t-shirt-594325-1684956294-6.jpg",
         image6_url:"https://images.bewakoof.com/t1080/men-s-grey-ultimate-warrior-graphic-printed-oversized-t-shirt-594325-1684956299-7.jpg",
         rating:"",
-        registered:"OFFICIAL MARVEL MERCHANDISE",
+        registered:"MARVEL MERCHANDISE",
     }
 ];
 
@@ -300,8 +300,14 @@ function displayProducts(arr){
         box.setAttribute("id","box");
         
         var a=document.createElement("a");
-        a.href="details.html";
-        
+        a.href="details_page/details.html";
+        // localStorage.setItem("open_product",JSON.stringify(el));
+        // console.log(el);
+        a.addEventListener("click",openEl)
+        function openEl(){
+            localStorage.setItem("open_product",JSON.stringify(el));
+            console.log(el);
+        }
         
 
         var div1=document.createElement("div");
@@ -331,6 +337,8 @@ function displayProducts(arr){
         i2.setAttribute("class","fa-regular fa-heart");
         i2.style.fontSize="18px";
         i2.style.color="#737373"
+        
+
         d1.append(i2);  //will ve appended to prodName
 
         prodName.append(pN,d1);
@@ -388,4 +396,91 @@ let listElements=document.querySelectorAll(".link");
     })
 
 document.getElementById("prod_count").textContent="("+mproducts.length+")";
+
+
+// var cate=document.getElementById("submenus");
+// cate.addEventListener("click",function(){
+//     checkcategory(el);
+//     // var category=document.getElementById("categoryname").textContent;
+//     // if(el.product_info.contains(category)){
+//     //     var categoryfilter=mproducts.filter(function(el){
+//     //         return el.product_info.contains(category);
+//     //     })
+//     //     displayProducts(categoryfilter);
+//     // }else{
+//     //     displayProducts(mproducts);
+//     // }
+    
+// })
+
+
+// function checkforcolor(){
+//     let a=0;    
+    
+//        function checkcategory(){
+//         const category = localStorage.getItem('category');
+//         if(category!=""){
+//             a++;
+//             document.getElementById('categoryname').style.color='#42a2a2';
+//         }
+//        else{
+//             document.getElementById('categoryname').style.color="black";
+//         }
+//        }
+    
+//        function checksize(){
+       
+//         const size = localStorage.getItem('size');
+//         if(size!=""){
+//             a++;
+//             document.getElementById('sizename').style.color='#42a2a2';
+//         }
+//         else if(size===""){
+//             document.getElementById('sizename').style.color="black";
+//         }
+//        }
+//        function checkcolor(){
+//         const color = localStorage.getItem('color');
+//         if(color!=""){
+//             a++;
+//             document.getElementById('colorname').style.color='#42a2a2';
+//         }
+//         else{
+//             document.getElementById('colorname').style.color="black";
+//         }
+//        }
+//        function checktype(){
+//         const type = localStorage.getItem('types');
+//         if(type!=""){
+//             a++;
+//             document.getElementById('typename').style.color='#42a2a2';
+//         }
+//         else {
+//             document.getElementById('typename').style.color="black";
+//         }
+    
+//        }
+//        function checkrating(){
+//         const rating = localStorage.getItem('rating');
+//         if(rating!=""){
+//             a++;
+//             document.getElementById('ratingname').style.color='#42a2a2';
+//         }
+//         else {
+//             document.getElementById('ratingname').style.color="black";
+//         }
+//        }
+//        checkcategory();
+//        checksize();
+//        checktype();
+//        checkrating();
+//        checkcolor();
+//        if(a>0){
+//         document.getElementById("clear").style.color="#42a2a2";
+//        }
+//        else{
+//         document.getElementById("clear").style.color='rgb(158 158 160)';
+//        }
+//     }
+
 

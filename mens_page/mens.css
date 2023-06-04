@@ -152,7 +152,7 @@ ul{
     display: block;
     color: black;
 }
-.submenus a{
+.submenus li{
     display: block;
     font-size: 15px;
     font-weight: 500;
@@ -160,7 +160,24 @@ ul{
     /* transition: all, 0.2s ease-out; */
     text-decoration: none;
     color: #737373;
+    background-color: transparent;
 }
+#colormenu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    display: -ms-inline-grid;
+    gap: 10px;
+    margin-top: 8px;
+    
+  }
+  #colormenu li{
+    border: 1px solid black;
+  }
+  #colormenu a{
+    transition: all , 1.5s ease-out;;
+  }
+
+
 .link>ul>li>div{
     width: 30px;
     list-style:none;
@@ -262,6 +279,7 @@ a{
     margin-bottom: -15px;
     line-height: 1;
     width: 80%;
+    
 }
 .prodName>div{
     margin: 10px;
@@ -349,8 +367,9 @@ a{
     line-height: 10px!important;
     text-transform: uppercase;
     padding: 4px;
-    margin-top:-14px;
+    /* margin-top:-14px; */
     margin-left: 4%;
+    align-content: flex-end;
 }
 
 .empProd{
