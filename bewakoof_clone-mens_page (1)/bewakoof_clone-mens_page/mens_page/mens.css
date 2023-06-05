@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
 *{
     box-sizing: border-box;
-    font-family: montserrat,sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
-    font-family: montserrat,sans-serif;
     font-size: 14px;
     background-color: #fff;
     text-rendering: optimizeLegibility;
     margin: auto;
     padding: 0;
-    width: 98%;
+    width: 80%;
+    
 }
 .curr_page{
     display: block;
@@ -62,7 +64,7 @@ body{
 #categoryWrapper{
     display: flex;
     justify-content: space-around;
-    width: 90%!important;
+    width: 95%!important;
     margin: auto;
 }
 #sorting{
@@ -73,13 +75,15 @@ body{
 #filterContainer{
     display: flex;
     flex-direction: column;
-    position: relative;
-    width: 20%!important;
-    
+    position: sticky;
+    margin-left: -18px;
+    /* position: relative; */
+    width: 27%!important;
+    background: white;
 }
 #filters{
     margin: auto;
-    position: absolute;
+    position: sticky;
     margin-top: 30px;
     width: 100%;
     padding: 0 0 0 0;
@@ -95,12 +99,6 @@ body{
     font-weight: bold;
     line-height: normal;
 } 
-/* #filterContainer>div{
-    display: block;
-    width: 100%;
-    position: absolute;
-    margin-bottom: 20px;
-} */
 ul{
     list-style: none;
 }
@@ -109,6 +107,7 @@ ul{
     margin: 2px 0px 0px -15px;
     border-radius: 8px;
     overflow: hidden;
+    
 }
 .acordion-menu li:last-child .dropdown{
     border-bottom: 0;
@@ -153,7 +152,7 @@ ul{
     display: block;
     color: black;
 }
-.submenus a{
+.submenus li{
     display: block;
     font-size: 15px;
     font-weight: 500;
@@ -161,7 +160,24 @@ ul{
     /* transition: all, 0.2s ease-out; */
     text-decoration: none;
     color: #737373;
+    background-color: transparent;
 }
+#colormenu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    display: -ms-inline-grid;
+    gap: 10px;
+    margin-top: 8px;
+    
+  }
+  #colormenu li{
+    border: 1px solid black;
+  }
+  #colormenu a{
+    transition: all , 1.5s ease-out;;
+  }
+
+
 .link>ul>li>div{
     width: 30px;
     list-style:none;
@@ -194,17 +210,39 @@ ul{
     position: relative;
     
 }
+#products>div:first-child{
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    
+}
+
+#products #drops{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#products>div:first-child:hover #drops{
+    opacity: 1;
+    visibility: visible;
+}
+
 #products h4{
     color: rgba(45,45,45,.5);
     font-family: montserrat-bold,sans-serif;
     font-size: 12px;
     text-transform: uppercase;
-    margin: 0px 0px 20px 0px;
-    padding-left: 45px;
+    /* margin: 0px 0px 20px 0px;
+    padding-left: 45px; */
+    /* margin: 0;
+    padding: 0; */
+    margin-right: 10px;
     font-weight: bold;
     line-height: normal;
     text-align: right;
+    align-items: center;
 }
+
 .extra{
     width: 100%!important;
 }
@@ -212,7 +250,7 @@ ul{
 #productflex{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+    gap: 30px;
     width: 100%!important;
 }
 
@@ -221,10 +259,14 @@ ul{
     padding-bottom: 15px;
     /* min-width: fit-content; */
     overflow: hidden;
-    max-width: fit-content;
-    
+    cursor: pointer;
     
 }
+a{
+    text-decoration: none;
+}
+
+
 #box img{
     width: 100%;
 }
@@ -237,6 +279,7 @@ ul{
     margin-bottom: -15px;
     line-height: 1;
     width: 80%;
+    
 }
 .prodName>div{
     margin: 10px;
@@ -279,6 +322,7 @@ ul{
     font-size: 16px!important;
     line-height: 14px!important;
     font-weight: bold;
+    color: #2d2d2d;
 }
 
 
@@ -311,6 +355,7 @@ ul{
     margin: auto;
     margin-top: -20px;
     margin-left: 3%;
+    color: #2d2d2d;
 }
 .material{
     max-width: fit-content;
@@ -322,8 +367,24 @@ ul{
     line-height: 10px!important;
     text-transform: uppercase;
     padding: 4px;
-    margin-top:-14px;
+    /* margin-top:-14px; */
     margin-left: 4%;
+    align-content: flex-end;
+}
+
+.empProd{
+    color: #737373;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.empDiv{
+    color: #737373;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 20%
+    border-color=#737373;
 }
 
 
@@ -347,6 +408,9 @@ ul{
         display: block;
         width: 100%;
         margin: auto;
+    }
+    .extra{
+        width: 100%;
     }    
     #productflex{
         grid-template-columns: repeat(2,1fr);
@@ -367,7 +431,12 @@ ul{
     #price_tags{
         display: block;
     }
-    .extra{
-        width: 100%;
+    .curr_page>ul>li{
+        text-align: center;
     }
+    .mainHeading, #container{
+        justify-content: center;
+        text-align: center;
+    }
+    
 }

@@ -1,5 +1,5 @@
 
-var cart=JSON.parse(localStorage.getItem("wishlist")) ||[];
+var cart=JSON.parse(localStorage.getItem("cartlist")) ||[];
     console.log("cart",cart)
 
     let updateitems = document.getElementById("total-items-cart");
@@ -74,7 +74,7 @@ var cart=JSON.parse(localStorage.getItem("wishlist")) ||[];
 
    if(cart.length==0)
 {
-  window.location.href = "Empty_cart.html"
+  // window.location.href = "Empty_cart.html"
 }
   display();
 
@@ -159,6 +159,6 @@ var cart=JSON.parse(localStorage.getItem("wishlist")) ||[];
 
 function delete_item(item,index){
     cart.splice(index,1);
-    localStorage.setItem("wishlist", JSON.stringify(cart));
+    localStorage.setItem("cartlist", JSON.stringify(cart));
     location.reload();
 }
