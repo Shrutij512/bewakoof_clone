@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Online Fashion Shopping for Men,Women,Accessories-Bewakoof.com</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+            <h1>Welcome to the world of Bewakoof!</h1>
+            <img id="login_image" src="https://images.bewakoof.com/web/group-19-1617704502.png"/>
+        </div>
+        <div>
+            <h1>Log in / Sign in</h1>
+            <p id="login_p">for Latest trends, exciting offers and everything Bewakoof!</p>
+
+         <div id="phone_no">
+            <div>
+              <img src="https://images.bewakoof.com/web/india-flag-round-1639566913.png"/>
+              <h3>+91</h3>
+            </div>
+            <input id="input_for_no" type="text" placeholder="Enter Mobile Number">
+         </div>
+         <p id="show_wrong_p"></p>
+         <button id="cont_btn">CONTINUE</button>
+         <hr id="hr">
+          
+         </hr>
+         <div id="mail">
+            <img src="https://images.bewakoof.com/web/carbon-email-1620039620.png"/>
+            <h3>CONTINUE FOR EMAIL</h3>
+         </div>
+         <div class="direct-login">
+            <div>
+                <img src="https://images.bewakoof.com/web/group-3-2x-1558356035.png"/>
+                <h3>GOOGLE</h3>
+            </div>
+            <div>
+                <img src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png"/>
+                <h3>FACEBOOK</h3>
+            </div>
+         </div>
+            <p id="terms">
+                By creating an account or logging in, you agree with Bewakoof's<span> Terms and Conditions</span> and
+                <span>Privacy Policy.</span>
+            </p>
+        
+    </div>
+  
+
+  </div>
+</body>
+<script>
+  
+  var loadVal = JSON.parse(localStorage.getItem("userdetails"))
+    var noarr = JSON.parse(localStorage.getItem("mobile_no")) || [];
+    document.querySelector("#cont_btn").addEventListener("click", myfunction);
+    function myfunction() {
+
+        var no = document.getElementById("input_for_no").value;
+
+        if (no == "") {
+            document.getElementById("mobile_no").style.border = "1px solid red"
+            document.getElementById("show_wrong_p").innerText = "Mobile Number is required"
+        }
+        else {
+
+            if (loadVal == null) {
+                var obj = {
+                    number: no
+                }
+                noarr.push(obj)
+                localStorage.setItem("mobile_no", JSON.stringify(noarr))
+                window.location.href = "signup.html"
+            }
+
+            else {
+                 checkno(loadVal, no)
+            }
+
+
+
+
+
+        }
+    }
+    function checkno( loadVal,no) {
+        loadVal.map(function (elem) {
+
+            if (no == elem.mobile) {
+               
+                var obj = {
+                    number: no
+                }
+                noarr.push(obj)
+                localStorage.setItem("mobile_no", JSON.stringify(noarr))
+                window.location.href = "otp.html"
+               var x=  document.getElementById("show_wrong_p");
+               x.innerText = "Enter otp"
+            } else {
+               
+                var obj = {
+                    number: no
+                }
+                noarr.push(obj)
+                localStorage.setItem("mobile_no", JSON.stringify(noarr))
+
+                window.location.href = "signup.html"
+                var x=  document.getElementById("show_wrong_p");
+               x.innerText = "New User Sign Up first"
+               
+
+            }
+        });
+
+    }
+    let Namearr = JSON.parse(localStorage.getItem("username")) ;
+     Namearr.map(function(ele){
+        document.getElementById("login_text").innerText=ele.name;
+     })
+
+  
+</script>
+</html>

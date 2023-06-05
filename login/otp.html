@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Fashion Shopping for Men,Women,Accessories-Bewakoof.com</title>
+    <link rel="stylesheet" href="otp.css">
+
+</head>
+
+<body>
+<div class="container">
+
+<div>
+    <h1>Verify with OTP</h1>
+    <p>Send to</p>
+    <h1 id="show_no"></h1>
+ <hr>
+    <p id="show_wrong_otp">Enter OTP</p>
+    <input id="enter_otp" type="password" maxlength="4" placeholder="OTP"/>
+    <h3>RESEND OTP</h3>
+    <p>HINT:Please Enter Numeric password as OTP</p>
+        <button id="log_btn">LOGIN</button>
+        </div>
+
+
+    </div>
+
+</body>
+<script>
+        var loadno = JSON.parse(localStorage.getItem("mobile_no"));
+    var Namearr = JSON.parse(localStorage.getItem("username")) || [];
+      for(let i=0;i<loadno.length;i++){
+        document.getElementById("show_no").innerText= loadno[loadno.length-1].number;
+      } 
+      let infoArr= JSON.parse(localStorage.getItem("userdetails"));
+
+document.querySelector("#log_btn").addEventListener("click",usercheck)
+function usercheck(){
+var otp=document.getElementById("enter_otp").value;
+checklog(infoArr,otp)
+}
+function checklog(infoArr,otp){
+    infoArr.map(function(ele){
+if(otp==ele.password){
+   var obj={
+    "name":ele.name
+   }
+   Namearr.push(obj)
+                localStorage.setItem("username", JSON.stringify(Namearr))
+    window.location.href="homepage.html";
+    return alert("All Set!,Enjoy Shopping")
+   
+}else{
+    var x= document.getElementById("show_wrong_otp");
+           x.innerText = "Wrong OTP";
+           x.style.color="red";
+}
+    })
+
+}
+</script>
+</html>
