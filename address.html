@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/17cb428520.js" crossorigin="anonymous"></script>
+    <title>Address</title>
+    <link rel="stylesheet" href="./address.css">
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+<div id="box">
+    <form action="" id="form">
+        <div id="header">
+            <i class="fa-solid fa-chevron-left"></i>
+            <h4> Add New Address</h4>
+        </div>
+        <div id="insideBox">
+            <button id="crossBtn"><a href="./cart.html">x</a></button>
+            <div class="info" style="cursor: not-allowed;">
+                <input type="text" class="input" style="cursor: not-allowed;">
+                <div id="country " style="display: flex;">
+                    <span class="place">Country</span>
+                    <span id="image"> 
+                    <img 
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgAv22s8dLybB0Je3uenK_2-fwSikQZ3KTRA&usqp=CAU" 
+                    alt="flag"> 
+                    India
+                   </span>
+                </div>
+            </div>
+            <div class="info">
+                <input type="text" class="input" id="fullName">
+                <span class="place" required>Full Name</span>
+            </div>
+            <div class="info">
+                <input type="text" class="input" id="mobileNum">
+                <span class="place">Mobile no.</span>
+            </div>
+            <hr>
+            <div class="info" style="margin-top: 30px;">
+                <input type="text" class="input" id="pincode">
+                <span class="place">Pincode / Postal Code / Zipcode</span>
+            </div>
+            <div class="info" id="city">
+                <div id="cityName">
+                    <input type="text" class="input" id="City">
+                    <span class="place">City</span>
+                </div>
+                <div id="state">
+                    <input type="text" class="input" id="State">
+                    <span class="place">State</span>
+                </div>
+            </div>
+            <div class="info">
+                <input type="text" class="input" id="flatNo">
+                <span class="place">Flat no./Building,Street name</span>
+            </div>
+            <div class="info">
+                <input type="text" class="input" id="area">
+                <span class="place">Area/Locality</span>
+            </div>
+            <div class="info">
+                <input type="text" class="input" id="landmark">
+                <span class="place">Landmark(optional)</span>
+            </div>
+            <div id="add">
+                <span>Save Address as</span>
+                <div>
+                    <div class="addType">Home</div>
+                    <div class="addType">Office</div>
+                    <div class="addType">Other</div>
+                </div>
+            </div>
+            <div id="submit">
+                <a href="./checkout.html" onclick="getDetails(event)" id="savingAdd" style="color: white ; text-decoration: none;">Save Address</a>
+                <!-- <button id="savingAdd"> <a href="./checkout.html" onclick="getDetails()">Save Address</a> </button> -->
+                <button id="cancelAdd"><a href="./cart.html"> Cancel </a></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</html>
+
+<script src="./scripts/address.js"></script>

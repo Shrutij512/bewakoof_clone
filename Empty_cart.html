@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty_cart</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #topsec {
+            margin-right: auto;
+            margin-left: 13%;
+            padding: 9px;
+            width: 11%;
+            height: auto;
+
+        }
+        #middle {
+
+            display: flex;
+            flex-direction: column;
+            margin-top: 2%;
+        }
+
+        #nobag {
+            text-align: center;
+            font-weight: 100;
+            font-family: sans-serif;
+            margin-bottom: 2px;
+
+        }
+
+        .success {
+            text-decoration: none;
+            color: #51cccc;
+            font-size: 18px;
+            text-align: center;
+            margin: auto;
+          
+        }
+
+        table {
+            margin: auto;
+            margin-top: 2%;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding-bottom: 3%;
+            padding-left: 4%;
+            padding-right:11%;
+        }
+        td
+        {
+            padding-left: 25px;
+           
+        }
+
+        a {
+            color: #51cccc;
+            font-size: 16px;
+            
+
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1%;
+
+        }
+        @media screen and (max-width: 900px) and (min-width: 650px) {
+            #logo
+            {
+                height: 60px;
+            }
+        }
+        @media screen and (max-width: 651px) and (min-width: 350px) {
+            #logo
+            {
+                height: auto;
+                width: 190px;
+                margin-left: 90%;
+                
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topsec"><img id="logo" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo-bday-y23.svg" alt="">
+    </div>
+    <hr>
+
+    <div id="middle">
+        <div id="bookimg"><img src="https://images.bewakoof.com/images/doodles/empty-cart-page-doodle.png" alt=""
+                style="width: 150px ;height: 50%;"></div>
+        <h2 id="nobag">Nothing in the bag</h2>
+        <a class="success" href="index.html"
+            style="padding: 10px; border: 2px solid; border-radius: 5px; display: inline-block; margin-top: 15px;">Continue
+            Shopping</a>
+    </div>
+    <hr id="bottomhr" style="width: 26%;margin-top: 3%;">
+    <p style="text-align: center;">You could try one of these categories:</p>
+    <table id="table">
+        <tr>
+            <th>Men</th>
+            <td><a href="mens.html">Topwear</a></td>
+            <td><a href="mens.html">Bottomwear</a></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><a href="mens.html">Footwear</a></td>
+            <td><a href="mens.html">Bottomwear</a></td>
+        </tr>
+
+
+
+        <tr>
+            <th>Women</th>
+            <td><a href="mens.html">Topwear</a></td>
+            <td><a href="mens.html">Footwear</a></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><a href="mens.html">Bottomwear</a></td>
+        </tr>
+
+
+
+        <tr>
+            <th>Mobile Covers</th>
+            <td><a href="mens.html">All Mobile Covers</a></td>
+        </tr>
+    </table>
+    <img id="cardlogo" src="https://images.bewakoof.com/web/secure-payments-image.png" alt="">
+
+</body>
+<script>
+    document.getElementById("logo").addEventListener("click",tohome)
+    function tohome()
+    {
+        // window.location.href = "index.html"
+        window.location.href = "mens.html"
+    }
+</script>
+</html>
