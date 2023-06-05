@@ -1,9 +1,8 @@
 
 
-var products=[  
+var mproducts=[  
     {
-       
-            image_url:"https://images.bewakoof.com/t1080/men-s-brown-smiling-cat-graphic-printed-oversized-t-shirt-592490-1684486405-1.jpg",
+        image_url:"https://images.bewakoof.com/t1080/men-s-brown-smiling-cat-graphic-printed-oversized-t-shirt-592490-1684486405-1.jpg",
         product_info:"Men's Brown Smiling Cat Graphic Printed Oversized T-shirt",
         price:1399,
         discounted_price:699,
@@ -16,12 +15,8 @@ var products=[
         image6_url:"https://images.bewakoof.com/t1080/men-s-brown-smiling-cat-graphic-printed-oversized-t-shirt-592490-1684486432-6.jpg",
         rating:4.5,
         registered:"Bewakoof",
-
-     
-
-    }, 
-     {
-        image_url:"https://images.bewakoof.com/t1080/men-s-brown-smiling-cat-graphic-printed-oversized-t-shirt-592490-1684486405-1.jpg",
+    },  {
+        image_url:"https://images.bewakoof.com/t1080/men-s-black-sneaker-gang-graphic-printed-t-shirt-595580-1685778344-1.jpg",
         product_info:"Men's Grey Smiling Cat Graphic Printed Oversized T-shirt",
         price:1299,
         discounted_price:649,
@@ -33,7 +28,7 @@ var products=[
         image5_url:"https://images.bewakoof.com/t1080/men-s-grey-smiling-cat-graphic-printed-oversized-t-shirt-594324-1684956332-6.jpg",
         image6_url:"https://images.bewakoof.com/t1080/men-s-grey-smiling-cat-graphic-printed-oversized-t-shirt-594324-1684956337-7.jpg",
         rating:0,
-        registered:"OFFICIAL GARFIELD MERCHANDISE",
+        registered:"GARFIELD MERCHANDISE",
     },  {
         image_url:"https://images.bewakoof.com/t1080/feel-most-alive-half-sleeve-t-shirt-navy-blue-307089-1655748632-1.jpg",
         product_info:"Feel Most Alive Half Sleeve T-Shirt Navy Blue",
@@ -286,22 +281,34 @@ var products=[
         image5_url:"https://images.bewakoof.com/t1080/men-s-grey-ultimate-warrior-graphic-printed-oversized-t-shirt-594325-1684956294-6.jpg",
         image6_url:"https://images.bewakoof.com/t1080/men-s-grey-ultimate-warrior-graphic-printed-oversized-t-shirt-594325-1684956299-7.jpg",
         rating:"",
-        registered:"OFFICIAL MARVEL MERCHANDISE",
+        registered:"MARVEL MERCHANDISE",
     }
 ];
 
-localStorage.setItem("all_products",JSON.stringify(products));
+localStorage.setItem("all_products",JSON.stringify(mproducts));
 
-console.log(products);
+console.log(mproducts);
 
-displayProducts(products);
+displayProducts(mproducts);
 
 function displayProducts(arr){
     // event.preventDefault();
 
     arr.map(function(el){
+        
         var box=document.createElement("div");
         box.setAttribute("id","box");
+        
+        var a=document.createElement("a");
+        a.href="details_page/details.html";
+        // localStorage.setItem("open_product",JSON.stringify(el));
+        // console.log(el);
+        a.addEventListener("click",openEl)
+        function openEl(){
+            localStorage.setItem("open_product",JSON.stringify(el));
+            console.log(el);
+        }
+        
 
         var div1=document.createElement("div");
         
@@ -325,39 +332,15 @@ function displayProducts(arr){
         h3.textContent=el.product_info;
         pN.append(h2,h3);   //will be appended to prodName
 
-         //will ve appended to prodName
-         var d1=document.createElement("div");
+        var d1=document.createElement("div");
         var i2=document.createElement("i"); // will be appended to d1
         i2.setAttribute("class","fa-regular fa-heart");
         i2.style.fontSize="18px";
         i2.style.color="#737373"
-   
-
-        i2.addEventListener("click",wishlistFun)
-        function wishlistFun(){
-            i2.style.color="red"
-            i2.style.fontSize="x-large"
-            const wish=JSON.parse(localStorage.getItem("wishlist")) ||[];
-
-            var wishobj={
-                image:el.image_url,
-                product_info:el.product_info,
-                price:el.price,
-                discounted_price:el.discounted_price,
-                members_price:el.members_price,
-            }
-            
-            console.log(wishobj)           
-                wish.push( wishobj)
-                
-            
-            localStorage.setItem("wishlist",JSON.stringify(wish))
-            
-
-         
-        }
-        d1.append(i2);
         
+
+        d1.append(i2);  //will ve appended to prodName
+
         prodName.append(pN,d1);
         div1.append(prodName) 
 
@@ -392,7 +375,8 @@ function displayProducts(arr){
         d4.textContent="100% COTTON";
         div4.append(d4);
 
-        box.append(image,div1,div2,div3,div4);
+        a.append(image,div1,div2,div3,div4);
+        box.append(a)
         document.getElementById("productflex").append(box);
     });
 }
@@ -411,4 +395,7 @@ let listElements=document.querySelectorAll(".link");
         })
     })
 
-document.getElementById("prod_count").textContent="("+products.length+")";
+document.getElementById("prod_count").textContent="("+mproducts.length+")";
+
+
+document.getElementById("Brand")

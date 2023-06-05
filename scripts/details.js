@@ -148,38 +148,30 @@ var mb= (+element.discounted_price) - +element.members_price;
 b.append(mb);
 
 var bt1=document.querySelector(".btn1");
+       
+bt1.addEventListener("click",carting())
 
-var i2=document.createElement("i");
-        i2.setAttribute("class","fa-solid fa-cart-plus");
-        i2.style.fontSize="18px";
-        i2.style.color="#737373"
-        bt1.append(i2,"ADD TO BAG");
+        
+function carting(){
+    var i2=document.querySelector(".fa-cart-plus")
+    i2.style.color="white"
+    i2.style.fontSize="x-large"
+    
+    const cart=JSON.parse(localStorage.getItem("cartlist")) ||[];            
 
-        i2.addEventListener("click",carting())
-        function carting(){
-            i2.style.color="black"
-            i2.style.fontSize="x-large"
-            const cart=JSON.parse(localStorage.getItem("cartlist")) ||[];
-            
-            
-            
-            var cartobj={
-                image:element.image_url,
-                product_info:element.product_info,
-                price:element.price,
-                discounted_price:element.discounted_price,
-                members_price:element.members_price,
-            }
+    var cartobj={
+        image:element.image_url,
+        product_info:element.product_info,
+        price:element.price,
+        discounted_price:element.discounted_price,
+        members_price:element.members_price,
+    }
 
-            console.log(cartobj)           
-                cart.push( cartobj)
-
-            if(cart.contains(cartobj)){
-                bt1.append(i2,"GO TO BAG");
-            }
-
-            localStorage.setItem("cartlist",JSON.stringify(cart));
-        }
+    console.log(cartobj)           
+        cart.push( cartobj)
+        
+    localStorage.setItem("cartlist",JSON.stringify(cart));
+}
 
 
 
