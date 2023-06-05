@@ -7,6 +7,8 @@
     <title>navbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="navbar.css">
+    <script src="navbar.js"defer></script>
+    <link href="signup.html">
     
 </head>
 <body>
@@ -34,12 +36,13 @@
           <div class="nav2-1">
          <nav>
           
-            <div class="wrapper">
+            <div class="wrappe">
              
               <input type="radio" name="slider" id="menu-btn">
               <input type="radio" name="slider" id="close-btn">
               <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                
                 <li>
                   <a href="#" class="desktop-item">MEN</a>
                   <input type="checkbox" id="showMega">
@@ -185,8 +188,11 @@
                 <i class="fa-solid fa-magnifying-glass" style="color: #bab8b8; margin: 0px 0px 0px 60px;"></i>
                 <input type="search" placeholder="Search by product,category or collection" >
                 <span>&#x2223;</span>
+                <a href="login.html" id="login_text" >Login</a>
+                <span id="username_text"></span>
                 
-                <a href="login.html" >Login</a>
+                <button id="logout_text">Logout</button>
+               
                 <a href="" <i class="fa-regular fa-heart" style="color: #000000;"></i></a>
                 <a href="" <i class="fa-solid fa-bag-shopping" style="color: #050505;"></i></a>
             </div>
@@ -203,12 +209,8 @@
         <a href="">PLUS SIZE</a>
         <a href="">TEENS</a>
     </div>
-
-
-  
-    </div>
+   </div>
 </div>
 </header>
 </body>
-
 </html>
