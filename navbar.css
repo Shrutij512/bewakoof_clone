@@ -1,0 +1,402 @@
+*{
+  font-family: montserrat,sans-serif;
+}
+.navbar{
+position: sticky;
+top: 0;
+z-index: 999;
+background-color: white;
+}
+
+.nav1{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px 6px 0px;
+  margin: -10px -8px 0px -8px;
+  background-color: rgb(232, 231, 231);
+  font-size: 10px;
+  font-weight: 500;
+}
+.nav1-1 a , .nav1-2 a{
+  text-decoration: none;
+  color: rgb(59, 57, 57);
+  margin: 0px 8px;
+}
+.nav1-1 a:hover , .con1-2 a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.nav2{
+  display: flex;
+  justify-content: space-around;
+  height: 48px;
+  margin: 0px -8px;
+  position: relative;
+  z-index: 99;
+  background-color: white;
+}
+.nav2 >img{
+  margin: 13px 0px 14px 0px;
+}
+.nav2-1{
+    margin: 15px 0px 12px 0px;
+}
+.nav2-1 a{
+  margin: 0px 10px;
+  text-decoration: none;
+  color: black;
+}
+.nav2-1 a ,nav2-2 a:hover{
+  cursor: pointer;
+}
+.nav2-2{
+  margin: 7px 0px 0px 0px;
+}
+input{
+  font-size: 12px;
+  padding: 12px 5px 9px 5px;
+  border-radius: 5px;
+  background-color: rgb(235, 237, 238);
+  border: 0;
+  width: 237px;
+}
+.nav2-2 a{
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  margin: 0px 2px 0px 2px;
+}
+
+span{
+  font-size:25px;
+  margin: 2px 0px;
+  color: rgb(209, 213, 213);
+}
+hr{
+  margin: 2px -8px 0px -8px;
+  border: 1px solid rgb(213, 209, 209);
+  background-color: rgb(211, 210, 210);
+}
+
+.nav3{
+  display:inline-flex;
+  align-items: center;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+}
+.nav3 a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 0px 22px;
+}
+
+nav{
+z-index: 99;
+width: 100%;
+}
+nav .wrappe{
+position: relative;
+margin: -16px 0px 0px -190px ;
+}
+.wrappe .logo a{
+font-size: 30px;
+font-weight: 600;
+text-decoration: none;
+}
+.wrappe .nav-links{
+display: inline-flex;
+white-space: nowrap;
+padding: 0px 0px 0px 160px;
+}
+.nav-links li{
+list-style: none;
+}
+.nav-links li a{
+text-decoration: none;
+font-size: 15px;
+font-weight: 500;
+padding: 9px 15px;
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+.mega-links li a:hover{
+border-bottom: 3px solid rgb(77, 77, 75);
+}
+.mega-links li a{
+color: grey;
+}
+.nav-links .mobile-item{
+display: none;
+}
+.nav-links li:hover .mega-box{
+transition: all 0.3s ease;
+top: 52px;
+opacity: 1;
+visibility: visible;
+}
+.mega-box{
+position: absolute;
+left: 0;
+width: 100%;
+padding: 0 30px;
+top: 85px;
+opacity: 0;
+visibility: hidden;
+}
+.mega-box .content{
+position: fixed;
+padding: 0px 20px;
+display: flex;
+width: 100%;
+background-color: white;
+border: 1px solid rgb(209, 213, 213);
+z-index: 1;
+}
+.mega-box .content .row{
+width: calc(25% - 30px);
+line-height: 45px;
+}
+.content .row img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.content .row header{
+font-size: 20px;
+font-weight: 500;
+}
+.content .row .mega-links{
+margin-left: -40px;
+}
+.row .mega-links li{
+padding: 0 20px;
+}
+.row .mega-links li a{
+padding: 0px;
+padding: 0 20px;
+font-size: 17px;
+display: block;
+}
+.desktop-item:hover{
+border-bottom: 4px solid rgb(253, 216, 53);
+}
+.wrappe .btn{
+font-size: 20px;
+cursor: pointer;
+display: none;
+}
+.wrappe .btn.close-btn{
+position: absolute;
+right: 30px;
+top: 10px;
+}
+.oologo img{
+display: none;
+}
+#username_text{
+font-size: 15px;
+color: black;
+margin: 0px;
+}
+#logout_text{
+border: 1px solid black;
+border-radius: 10px;
+font-size: 15px;
+margin: 0px 2px;
+}
+
+@media screen and (max-width: 1199px){
+
+}
+@media screen and (max-width: 1199px) {
+.nav3{
+  display: inline-flex;
+    overflow-y: scroll;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+
+}
+.nav3 a{
+  padding: 22px;
+  font-size: 17px;
+}
+.nav3::-webkit-scrollbar{
+  display: none;
+}
+
+}
+@media screen and (max-width: 1033px) {
+.nav2-2 input ,.nav2-2 span{
+display: none;
+}
+.wrappe .btn{
+  display: block;
+  margin: 12px 0px 0px 50px;
+ 
+}
+.bewa{
+  display: none;
+}
+
+.wrappe .nav-links{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  max-width: 350px;
+  top: 0;
+  left: -100%;
+  display: block;
+  padding: 50px 10px;
+  line-height: 50px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+#menu-btn:checked ~ .nav-links{
+  left: 0%;
+  background-color: rgb(229, 228, 228);
+}
+#menu-btn:checked ~ .btn.menu-btn{
+  display: none;
+}
+#close-btn:checked ~ .btn.menu-btn{
+  display: block;
+}
+.nav-links li{
+  margin: 15px 10px;
+}
+.nav-links li a{
+  padding: 0 20px;
+  display: block;
+  font-size: 20px;
+}
+#showMega:checked ~ .mega-box{
+  max-height: 100%;
+}
+.nav-links .desktop-item{
+  display: none;
+}
+.nav-links .mobile-item{
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.mega-box{
+  position: static;
+  top: 65px;
+  opacity: 1;
+  visibility: visible;
+  padding: 0 20px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.mega-box .content{
+  position: static;
+  box-shadow: none;
+  flex-direction: column;
+  padding: 20px 20px 0 20px;
+}
+.mega-box .content .row{
+  width: 100%;
+  margin-bottom: 15px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.mega-box .content .row:nth-child(1),
+.mega-box .content .row:nth-child(2){
+  border-top: 0px;
+}
+.content .row .mega-links{
+  border-left: 0px;
+  padding-left: 15px;
+}
+.row .mega-links li{
+  margin: 0;
+}
+.content .row header{
+  font-size: 19px;
+}
+.nav1{
+  display: none;
+}
+.oologo img{
+display: block;
+margin: -24px 0px 0px -100px;
+
+}
+.nav3{
+display: inline-flex;
+  overflow-y: scroll;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+
+}
+.nav3 a{
+padding: 10px;
+font-size: 15px;
+}
+}
+nav input{
+display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+.wrappe .btn{
+  display: block;
+  margin: 12px 0px 0px 100px;
+}
+.oologo img{
+  display: block;
+  margin: -24px 0px 0px -65px;
+  
+}
+
+}
+@media only screen and (max-width: 600px) {
+.nav1{
+    display: none;
+}
+.wrappe .btn{
+  display: block;
+  margin: 12px 0px 0px 150px;
+}
+.oologo img{
+  display: block;
+  margin: -24px 0px 0px -15px;
+  
+}
+}
+@media only screen and (max-width: 400px) {
+.nav1{
+  display: none;
+}
+.wrappe .btn{
+display: block;
+margin: 12px 0px 0px 200px;
+}
+.oologo img{
+display: block;
+margin: -24px 0px 0px 33px;
+
+}
+}
+
