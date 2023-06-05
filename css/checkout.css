@@ -368,8 +368,10 @@ button {
     background-color: rgb(66, 162, 162);
     color: white;
     padding: 8px;
-    margin-left: 173px;
+    
+    margin-left: 315px;
     border: none;
+
     margin-top: 10px;
 }
 

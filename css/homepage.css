@@ -4,6 +4,7 @@
 .hom1{
   display: flex;
   align-items: center;
+  margin-top: 150px;
   justify-content: center;
 }
 .wrapper {
