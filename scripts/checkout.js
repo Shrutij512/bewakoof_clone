@@ -109,7 +109,7 @@ function afterPay(i) {
     }
 }
 
-var products = JSON.parse(localStorage.getItem("wishlist")) || [];
+var products = JSON.parse(localStorage.getItem("cartlist")) || [];
 
 products.map(function(el) {
     var div = document.createElement("div");

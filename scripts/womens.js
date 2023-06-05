@@ -299,7 +299,7 @@ function displayProducts(arr){
         box.setAttribute("id","box");
         
         var a=document.createElement("a");
-        a.href="details_page/details.html";
+        a.href="details.html";
         a.addEventListener("click",openEl)
         function openEl(){
             localStorage.setItem("open_product",JSON.stringify(el));
