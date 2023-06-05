@@ -21,21 +21,22 @@
             <h4> Add New Address</h4>
         </div>
         <div id="insideBox">
-            <i class="fa-solid fa-xmark"></i>
+            <button id="crossBtn"><a href="./cart.html">x</a></button>
             <div class="info" style="cursor: not-allowed;">
                 <input type="text" class="input" style="cursor: not-allowed;">
                 <div id="country " style="display: flex;">
+                    <span class="place">Country</span>
                     <span id="image"> 
                     <img 
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgAv22s8dLybB0Je3uenK_2-fwSikQZ3KTRA&usqp=CAU" 
-                    alt="flag">
+                    alt="flag"> 
+                    India
                    </span>
-                    <span class="place">India</span>
                 </div>
             </div>
             <div class="info">
                 <input type="text" class="input" id="fullName">
-                <span class="place">Full Name</span>
+                <span class="place" required>Full Name</span>
             </div>
             <div class="info">
                 <input type="text" class="input" id="mobileNum">
@@ -77,12 +78,13 @@
                 </div>
             </div>
             <div id="submit">
-                <button id="savingAdd">Save Address</button>
-                <button id="cancelAdd">Cancel</button>
+                <a href="./checkout.html" onclick="getDetails(event)" id="savingAdd" style="color: white ; text-decoration: none;">Save Address</a>
+                <!-- <button id="savingAdd"> <a href="./checkout.html" onclick="getDetails()">Save Address</a> </button> -->
+                <button id="cancelAdd"><a href="./cart.html"> Cancel </a></button>
             </div>
         </div>
+    </form>
 </div>
-</form>
 
 </html>
 

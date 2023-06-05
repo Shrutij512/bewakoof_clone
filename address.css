@@ -38,7 +38,7 @@
 
 #image img {
     width: 20;
-    margin-left: 5px;
+    margin-left: -43px;
 }
 
 .info input {
@@ -46,6 +46,8 @@
     height: 40px;
     border: 1px solid rgb(132, 145, 155);
     border-radius: 5px;
+    padding: 14px;
+    background: white;
 }
 
 .info .place {
@@ -53,22 +55,19 @@
     background: white;
     color: rgb(132, 145, 155);
     transition: 0.2s ease;
-    top: -28px;
     left: 10px;
     border-radius: 3px;
     padding: 2px;
+    top: -48px;
+    font-size: 14px;
 }
 
-input:focus+.place {
-    top: -45px;
-    font-size: 14px;
-    color: black;
-}
-
-input:focus+.place {
-    top: -45px;
-    font-size: 14px;
-    color: black;
+#crossBtn {
+    border: none;
+    background-color: white;
+    position: relative;
+    top: -15;
+    left: 95%;
 }
 
 .info label {
