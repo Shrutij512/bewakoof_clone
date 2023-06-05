@@ -244,7 +244,7 @@ const infiniteScroll17 = () => {
         carousel17.classList.remove("no-transition");
     }
 
-    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+   // Clear existing timeout & start autoplay if mouse is not hovering over carousel
     clearTimeout(timeoutId17);
     if(!wrapper17.matches(":hover")) autoPlay17();
 }
@@ -255,5 +255,7 @@ carousel17.addEventListener("mousedown", dragStart17);
 carousel17.addEventListener("mousemove", dragging17);
 document.addEventListener("mouseup", dragStop17);
 carousel17.addEventListener("scroll", infiniteScroll17);
+
 wrapper17.addEventListener("mouseenter", () => clearTimeout(timeoutId17));
 wrapper17.addEventListener("mouseleave", autoPlay17);
+

@@ -1,13 +1,188 @@
 .hom1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+ background: transparent;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: 22px;
+}
+.wrapper i:last-child{
+  right: 22px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .img img {
+  width:98%;
+  height: 98%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+.hom2{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    margin: 30px 30px 30px 30px;
+}
+.hom2 img{
+  width: 100%;
+}
+.hom2 p{
+   text-align: center;
+    font-family: montserrat,sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+   color: black;
+}
+.hom2 a{
+    text-decoration: none;
+}
+
+.hom3 img{
+    width: 100%;
+}
+
+.hom4 p{
+    text-align: center;
+    font-family: montserrat,sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+}
+
+.hom5{
+    display: flex;
+}
+.hom5 img{
+    width: 100%;
+}
+
+.hom6 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hom7-1{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom7-2{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom7-1 img , .hom7-2 img{
+    width: 100%;
+}
+.hom7-3 img{
+    width: 100%;
+}
+
+.hom8 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hom9-1 ,.hom9-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+} 
+.hom9-1 img ,.hom9-2 img{
+    width: 98%;
+    height: 96%;
+}
+
+.hom10 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.hom11{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom11 img{
+    width: 100%;
+}
+
+.hom12{
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .wrapper {
+  .wrapper12 {
     width: 100%;
     position: relative;
   }
-  .wrapper i {
+  .wrapper12 i {
     top: 50%;
     height: 50px;
     width: 50px;
@@ -23,16 +198,16 @@
     transition: transform 0.1s linear;
    background: transparent;
   }
-  .wrapper i:active{
+  .wrapper12 i:active{
     transform: translateY(-50%) scale(0.85);
   }
-  .wrapper i:first-child{
+  .wrapper12 i:first-child{
     left: 22px;
   }
-  .wrapper i:last-child{
+  .wrapper12 i:last-child{
     right: 22px;
   }
-  .wrapper .carousel{
+  .wrapper12 .carousel12{
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 12px);
@@ -41,469 +216,298 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
   }
-  .carousel::-webkit-scrollbar {
+  .carousel12::-webkit-scrollbar {
     display: none;
   }
-  .carousel.no-transition {
+  .carousel12.no-transition {
     scroll-behavior: auto;
   }
-  .carousel.dragging {
+  .carousel12.dragging12 {
     scroll-snap-type: none;
     scroll-behavior: auto;
   }
-  .carousel.dragging .card {
+  .carousel12.dragging12 .card12 {
     cursor: grab;
     user-select: none;
   }
-  .carousel :where(.card, .img) {
+  .carousel12 :where(.card12, .img12) {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .carousel .card .img {
+  .carousel12 .card12 .img12 {
     width: 100%;
     height: 100%;
   }
-  .card .img img {
-    width: 380px;
-    height: 380px;
+  .card12 .img12 img {
+    width: 98%;
+    height: 98%;
     object-fit: cover;
   }
   
   @media screen and (max-width: 900px) {
-    .wrapper .carousel {
+    .wrapper12 .carousel12 {
       grid-auto-columns: calc((100% / 2) - 9px);
     }
   }
   
   @media screen and (max-width: 600px) {
-    .wrapper .carousel {
+    .wrapper12 .carousel12 {
       grid-auto-columns: 100%;
     }
   }
-  
-  .hom2{
-      display: grid;
-      grid-template-columns: repeat(8,1fr);
-      margin: 30px 30px 30px 30px;
-  }
-  .hom2 img{
+
+.hom13 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.hom14{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.hom14 img{
     width: 100%;
+}
+
+.hom15 p{
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.hom16-1 ,.hom16-2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+} 
+.hom16-1 img ,.hom16-2 img{
+    width: 98%;
+    height: 98%;
+}
+
+.hom17{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.bewakoof.com/web/bg-web-mc-land-page.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px 0px;
+}
+.hom17-1{
+    font-family: montserrat,sans-serif;
+    text-align: center;
+}
+
+.card17 a{
+    text-decoration: none;
+}
+.hom17-2-a> img{
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.hom17-2-a> img:hover{
+    transform: scale(1.02);
+}
+.hover1 img,.hover2 img,.hover3 img,.hover4 img,.hover5 img{
+    width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.hover1 ,.hover2 ,.hover3,.hover4,.hover5{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.hom17-2-a:hover .hover1,.hom17-2-a:hover .hover2 ,.hom17-2-a:hover .hover3,.hom17-2-a:hover .hover4 ,.hom17-2-a:hover .hover5{
+    display: block;
+}
+.hom17-2-a{
+    position: relative;
+}
+.hom17-2-b2{
+    display: flex;
+}
+.hom17-2-b1{
+    display: flex;
+}
+.card17{
+    border: 1px solid rgb(222, 222, 228);
+    border-radius: 7px;
+    width: 90%;
+}
+#s1{
+    position: absolute; 
+    top: 0;
+}
+#s1 span{
+    color: white;
+    background-color: #31be5f;
+    font-size: 10px;
+    padding: 5px;
+    margin:0px;
+    opacity: 0.9;
+    border-top-left-radius: 7px;
+}
+#s2{
+    position: absolute;
+    top: 0;
+}
+#s2 span{
+    color: white;
+    background-color: #494646;
+    font-size: 10px;
+    padding: 5px;
+    margin:0px;
+    opacity: 0.9;
+    border-top-left-radius: 7px;
+}
+.hom17-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .hom2 p{
-     text-align: center;
-      font-family: montserrat,sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-     color: black;
+  .wrapper17 {
+    width: 100%;
+    position: relative;
   }
-  .hom2 a{
-      text-decoration: none;
+  .wrapper17 i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+   background: transparent;
   }
+  .wrapper17 i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper17 i:first-child{
+    left: 22px;
+    z-index: 5;
+  }
+  .wrapper17 i:last-child{
+    right: 22px;
+  }
+  .wrapper17 .carousel17{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4) - 10px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel17::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel17.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel17.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel17.dragging17 .card17 {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel17 :where(.card17, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card17-2-a img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 1000px) {
+    .wrapper17 .carousel17 {
+      grid-auto-columns: calc((100% / 3) - 10px);
+    }
+     } 
+   @media screen and (max-width: 800px) {
+    .wrapper17 .carousel17 {
+      grid-auto-columns: calc((100% / 2) - 10px);
+    }
+     } 
+     @media screen and (max-width: 600px) {
+      .wrapper17 .carousel17 {  
+        grid-auto-columns: 50%;
+      }
+    }
+    @media screen and (max-width: 525px) {
+      .wrapper17 .carousel17 {  
+        grid-auto-columns: 70%;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      .wrapper17 .carousel17 {  
+        grid-auto-columns: 90%;
+      }
+    }
   
-  .hom3 img{
-      width: 100%;
-  }
+
+.hom17-3{
+    text-align: center;
+}
+.hom17-3 a{
+    color: rgb(66,162,165);
+}
+
+.hom18 img, .hom19 img{
+    width: 100%;
+}
+.hom18{
+    margin: 10px 0px;
+}
+
+@media only screen and (max-width: 800px) {
+   .hom2{
+    display: grid;
+        grid-template-columns: repeat(4,1fr);
+   }
+}
+@media only screen and (max-width: 600px) {
   
-  .hom4 p{
-      text-align: center;
-      font-family: montserrat,sans-serif;
-      letter-spacing: 2px;
-      font-weight: 700;
-      font-size: 20px;
-      margin: 0;
-  }
-  
-  .hom5{
-      display: flex;
-  }
-  .hom5 img{
-      width: 100%;
-  }
-  
-  .hom6 p{
-      font-family: montserrat, sans-serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      font-size: 20px;
-      text-align: center;
-  }
-  
-  .hom7-1{
-      display: grid;
-      grid-template-columns: repeat(6,1fr);
-  }
-  .hom7-2{
-      display: grid;
-      grid-template-columns: repeat(6,1fr);
-  }
-  .hom7-1 img , .hom7-2 img{
-      width: 100%;
-  }
-  .hom7-3 img{
-      width: 100%;
-  }
-  
-  .hom8 p{
-      font-family: montserrat, sans-serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      font-size: 20px;
-      text-align: center;
-  }
-  
-  .hom9-1 ,.hom9-2{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-  } 
-  .hom9-1 img ,.hom9-2 img{
-      width: 98%;
-      height: 96%;
-  }
-  
-  .hom10 p{
-      font-family: montserrat, sans-serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      font-size: 22px;
-      text-align: center;
-  }
-  
-  .hom11{
-      display: grid;
-      grid-template-columns: repeat(6,1fr);
-  }
-  .hom11 img{
-      width: 100%;
-  }
-  
-  .hom12{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .hom7-1{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
-    .wrapper12 {
-      width: 100%;
-      position: relative;
+    .hom7-2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
-    .wrapper12 i {
-      top: 50%;
-      height: 50px;
-      width: 50px;
-      cursor: pointer;
-      font-size: 1.25rem;
-      position: absolute;
-      text-align: center;
-      line-height: 50px;
-      background: #fff;
-      border-radius: 50%;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      transform: translateY(-50%);
-      transition: transform 0.1s linear;
-     background: transparent;
+    .hom11{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
-    .wrapper12 i:active{
-      transform: translateY(-50%) scale(0.85);
-    }
-    .wrapper12 i:first-child{
-      left: 22px;
-    }
-    .wrapper12 i:last-child{
-      right: 22px;
-    }
-    .wrapper12 .carousel12{
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: calc((100% / 3) - 12px);
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
-    }
-    .carousel12::-webkit-scrollbar {
-      display: none;
-    }
-    .carousel12.no-transition {
-      scroll-behavior: auto;
-    }
-    .carousel12.dragging12 {
-      scroll-snap-type: none;
-      scroll-behavior: auto;
-    }
-    .carousel12.dragging12 .card12 {
-      cursor: grab;
-      user-select: none;
-    }
-    .carousel12 :where(.card12, .img12) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .carousel12 .card12 .img12 {
-      width: 100%;
-      height: 100%;
-    }
-    .card12 .img12 img {
-      width: 380px;
-      height: 380px;
-      object-fit: cover;
+    .hom14{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
     }
     
-    @media screen and (max-width: 900px) {
-      .wrapper12 .carousel12 {
-        grid-auto-columns: calc((100% / 2) - 9px);
-      }
-    }
-    
-    @media screen and (max-width: 600px) {
-      .wrapper12 .carousel12 {
-        grid-auto-columns: 100%;
-      }
-    }
-  
-  .hom13 p{
-      font-family: montserrat, sans-serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      font-size: 22px;
-      text-align: center;
-  }
-  
-  .hom14{
-      display: grid;
-      grid-template-columns: repeat(6,1fr);
-  }
-  .hom14 img{
-      width: 100%;
-  }
-  
-  .hom15 p{
-      font-family: montserrat, sans-serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      font-size: 22px;
-      text-align: center;
-  }
-  
-  .hom16-1 ,.hom16-2{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-  } 
-  .hom16-1 img ,.hom16-2 img{
-      width: 98%;
-      height: 98%;
-  }
-  
-  .hom17{
-      height: 100%;
-      width: 100%;
-      background-image: url(https://images.bewakoof.com/web/bg-web-mc-land-page.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 12px 0px;
-  }
-  .hom17-1{
-      font-family: montserrat,sans-serif;
-      text-align: center;
-  }
-  
-  .card17 a{
-      text-decoration: none;
-  }
-  .hom17-2-a> img{
-      width: 100%;
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-  }
-  .hom17-2-a> img:hover{
-      transform: scale(1.02);
-  }
-  .hover1 img,.hover2 img,.hover3 img,.hover4 img,.hover5 img{
-      width: 100%;
-      border-top-left-radius: 7px;
-      border-top-right-radius: 7px;
-  }
-  .hover1 ,.hover2 ,.hover3,.hover4,.hover5{
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: none;
-  }
-  
-  .hom17-2-a:hover .hover1,.hom17-2-a:hover .hover2 ,.hom17-2-a:hover .hover3,.hom17-2-a:hover .hover4 ,.hom17-2-a:hover .hover5{
-      display: block;
-  }
-  .hom17-2-a{
-      position: relative;
-  }
-  .hom17-2-b2{
-      display: flex;
-  }
-  .hom17-2-b1{
-      display: flex;
-  }
-  .card17{
-      border: 1px solid rgb(222, 222, 228);
-      border-radius: 7px;
-      width: 90%;
-  }
-  #s1{
-      position: absolute; 
-      top: 0;
-  }
-  #s1 span{
-      color: white;
-      background-color: #31be5f;
-      font-size: 10px;
-      padding: 5px;
-      margin:0px;
-      opacity: 0.9;
-      border-top-left-radius: 7px;
-  }
-  #s2{
-      position: absolute;
-      top: 0;
-  }
-  #s2 span{
-      color: white;
-      background-color: #494646;
-      font-size: 10px;
-      padding: 5px;
-      margin:0px;
-      opacity: 0.9;
-      border-top-left-radius: 7px;
-  }
-  .hom17-2{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .wrapper17 {
-      width: 100%;
-      position: relative;
-    }
-    .wrapper17 i {
-      top: 50%;
-      height: 50px;
-      width: 50px;
-      cursor: pointer;
-      font-size: 1.25rem;
-      position: absolute;
-      text-align: center;
-      line-height: 50px;
-      background: #fff;
-      border-radius: 50%;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-      transform: translateY(-50%);
-      transition: transform 0.1s linear;
-     background: transparent;
-    }
-    .wrapper17 i:active{
-      transform: translateY(-50%) scale(0.85);
-    }
-    .wrapper17 i:first-child{
-      left: 22px;
-      z-index: 5;
-    }
-    .wrapper17 i:last-child{
-      right: 22px;
-    }
-    .wrapper17 .carousel17{
-      display: grid;
-      grid-auto-flow: column;
-      /* grid-auto-columns: calc((100% / 3) - 12px); */
-      grid-auto-columns: calc((100% / 5) - 10px);
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
-    }
-    .carousel17::-webkit-scrollbar {
-      display: none;
-    }
-    .carousel17.no-transition {
-      scroll-behavior: auto;
-    }
-    .carousel17.dragging {
-      scroll-snap-type: none;
-      scroll-behavior: auto;
-    }
-    .carousel17.dragging17 .card17 {
-      cursor: grab;
-      user-select: none;
-    }
-    .carousel17 :where(.card17, .img) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    /* .carousel .card .img {
-      width: 100%;
-      height: 100%;
-    } */
-    .card17-2-a img {
-      /* width: 380px;
-      height: 380px; */
-      object-fit: cover;
-    }
-    
-    @media screen and (max-width: 900px) {
-      .wrapper17 .carousel17 {
-        grid-auto-columns: calc((100% / 2) - 9px);
-      }
-    }
-    
-    @media screen and (max-width: 600px) {
-      .wrapper17 .carousel17 {
-        grid-auto-columns: 100%;
-      }
-    }
-    
-  
-  .hom17-3{
-      text-align: center;
-  }
-  .hom17-3 a{
-      color: rgb(66,162,165);
-  }
-  
-  .hom18 img, .hom19 img{
-      width: 100%;
-  }
-  .hom18{
-      margin: 10px 0px;
-  }
-  
-  @media only screen and (max-width: 800px) {
-     .hom2{
-      display: grid;
-          grid-template-columns: repeat(4,1fr);
-     }
-  }
-  @media only screen and (max-width: 600px) {
-    
-      .hom7-1{
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-      }
-      .hom7-2{
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-      }
-      .hom11{
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-      }
-      .hom14{
-          display: grid;
-          grid-template-columns: repeat(3,1fr);
-      }
-      
-  }
-  @media only screen and (max-width: 425px) {
-      .hom2{
-          display: grid;
-          grid-template-columns: repeat(2,1fr);
-         }
-  }
+}
+@media only screen and (max-width: 425px) {
+    .hom2{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       }
+}
