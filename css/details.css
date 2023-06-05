@@ -47,7 +47,7 @@ body {
 }
 
 #productContainer{
-    width: 70%;
+    width: 80%;
     display: flex;
     gap: 30px;
     margin: auto;
@@ -154,10 +154,14 @@ body {
     margin-top: .5rem;
     text-align: center;
     vertical-align: middle;
+    
     padding: 12px 0%;
     border: 5px solid #e6e7e9;
     border-left: 0px;
     border-right: 0px;
+}
+.tribeMsg{
+    font-size: 15px;
 }
 .c{
     cursor: pointer;
@@ -196,12 +200,13 @@ body {
 #lastdiv{
     width: 75%;
     margin:auto;
-
+    margin-top: 20px;
 }
 .containerEnd{
     display: flex;
     gap: 30px;
     overflow: scroll;
+    margin-top: 20px;
 }
 .containerEnd::-webkit-scrollbar{
     display: none;
