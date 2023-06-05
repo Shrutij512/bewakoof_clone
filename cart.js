@@ -4,6 +4,7 @@ var cart=JSON.parse(localStorage.getItem("wishlist")) ||[];
 
     let updateitems = document.getElementById("total-items-cart");
     updateitems.textContent=  "My Bag "+ cart.length+" item(s)" ;
+      
 
    let discounted_price =cart.discounted_price;
    console.log(discounted_price);

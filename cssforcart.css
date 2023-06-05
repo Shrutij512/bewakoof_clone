@@ -56,10 +56,11 @@ body{
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
-
-
     margin-left: 200px;
     margin-top: 40px;
+    margin-bottom: -50px;
+    
+    
 }
 #cart-shown-left {
     flex: 3;
@@ -72,6 +73,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 20px;
+    
 
 }
 
@@ -88,7 +90,6 @@ body{
     display: grid;
     align-items: center;
     margin-top: 10px;
-
     height: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -117,14 +118,34 @@ body{
 }
 
 #grey-border {
-    color: #2D2D2D;
-    font: 14px;
+    
+    color: rgb(45, 45, 45);
+    
     margin-top: 0px;
-    padding: 10px 15px;
-    border: rgb(208, 207, 207);
+    padding: 5px 15px;
     border-style: ridge;
-    border-width: thin;
-    border-radius: 3px;
+    border-width: 1px;
+    border-radius: 4px;
+    line-height: 1.44;
+    font-size: 14px;
+    border-style: solid;
+    border-color: rgb(234, 234, 234);
+    background-color: rgb(255, 255, 255);
+
+}
+#grey-border3{
+    color: rgb(45, 45, 45);
+    height: auto;
+    margin-top: 0px;
+    padding: 5px 15px;
+    border-style: ridge;
+    border-width: 1px;
+    border-radius: 4px;
+    line-height: 1.44;
+    font-size: 14px;
+    border-style: solid;
+    border-color: rgb(234, 234, 234);
+    background-color: rgb(255, 255, 255);
 }
 #border-grey {
     border: 1px solid gray;
@@ -179,7 +200,7 @@ body{
     height: 30px;
     background-color: lightgray;
     margin-bottom: 0px;
-
+    
 }
 
 #saving-div {
@@ -203,11 +224,15 @@ body{
     width: 300px;
     border-radius: 5px;
     border: none;
+    line-height: 14px;
+    font-size: medium;
+    cursor: pointer;
 }
 #parent{
     display: flex;
     margin-top: 100px;
     gap: 20px;
+   
 }
 #cart-shown-right {
     flex: 2;
@@ -308,8 +333,110 @@ body{
 #bottomimg{
     display: flex;
 }
+#bottomimg p{
+    
+    font-size: 8px;
+    
+    margin-right: 30px;
+    text-align: center;
+  
+}
 .av{
     width: 100%;
     height: 50px;
     padding-bottom: 10px;
 }
+#quant{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1246px) and (min-width: 670px){
+    body {
+        background-color: hsl(75, 46%, 95%);
+    }
+
+    #parent {
+        margin-right: 9%;
+        margin-top: 5%;
+    }
+    #cart-shown-right {
+        flex: 2;
+        margin-right: 200px;
+    }  
+    .offer-div {
+
+        height: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        border-radius: 5px;
+    
+    }
+    #cart-shown-left {
+        flex: 3;
+        margin-left: 200px;
+    }
+    #price_box {
+        display: flex;
+        column-gap: 10px;
+        font-size: 15px;
+        margin-top: 10px;
+    
+    }
+    #par {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        border: solid rgb(219, 214, 214);
+        border-width: thin;
+        border-radius: 5px;
+        margin-bottom: 2%;
+    
+    }
+    #product-item {
+        width: 100%;
+        height: auto;
+    
+    } 
+}
+
+@media screen and (max-width:671px) and (min-width:340px) {
+
+    body {
+        background-color: hsl(46, 52%, 94%);
+    }
+
+    #parent {
+        margin-right: 9%;
+        margin-top: 5%;
+    }
+    #parent{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        gap: 20px;
+       
+    }
+
+    #price_box {
+        display: flex;
+        flex-direction: column;
+        column-gap: 10px;
+        font-size: 15px;
+        margin-top: 10px;
+    
+    }
+    #product-item {
+        width: 100%;
+        height: auto;
+    
+    } 
+    #product-item {
+        width: 100%;
+        height: auto;
+    
+    } 
+}
+
