@@ -81,7 +81,7 @@ body {
 
 .prodThumbnail{
     padding: 10px;
-    height: 450px;
+    height: 350px;
     overflow: scroll;
     
 }
@@ -199,8 +199,27 @@ body {
 .containerEnd{
     display: flex;
     gap: 30px;
+    overflow: scroll;
 }
-
+.containerEnd::-webkit-scrollbar{
+    display: none;
+}
+.containerEnd>div{
+    width: 100%;
+}
 .containerEnd > div > img{
     width: 100%;
+}
+
+@media all and (max-width:768px) {
+    #productContainer{
+        display: block;
+        width: 90%;
+    }
+    #infoContainer{
+        width: 100%;
+    }
+    .imgContainer{
+        width: 100%;
+    }
 }

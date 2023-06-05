@@ -16,7 +16,7 @@ var mproducts=[
         rating:4.5,
         registered:"Bewakoof",
     },  {
-        image_url:"https://images.bewakoof.com/t1080/men-s-brown-smiling-cat-graphic-printed-oversized-t-shirt-592490-1684486405-1.jpg",
+        image_url:"https://images.bewakoof.com/t1080/men-s-black-sneaker-gang-graphic-printed-t-shirt-595580-1685778344-1.jpg",
         product_info:"Men's Grey Smiling Cat Graphic Printed Oversized T-shirt",
         price:1299,
         discounted_price:649,
@@ -398,89 +398,4 @@ let listElements=document.querySelectorAll(".link");
 document.getElementById("prod_count").textContent="("+mproducts.length+")";
 
 
-// var cate=document.getElementById("submenus");
-// cate.addEventListener("click",function(){
-//     checkcategory(el);
-//     // var category=document.getElementById("categoryname").textContent;
-//     // if(el.product_info.contains(category)){
-//     //     var categoryfilter=mproducts.filter(function(el){
-//     //         return el.product_info.contains(category);
-//     //     })
-//     //     displayProducts(categoryfilter);
-//     // }else{
-//     //     displayProducts(mproducts);
-//     // }
-    
-// })
-
-
-// function checkforcolor(){
-//     let a=0;    
-    
-//        function checkcategory(){
-//         const category = localStorage.getItem('category');
-//         if(category!=""){
-//             a++;
-//             document.getElementById('categoryname').style.color='#42a2a2';
-//         }
-//        else{
-//             document.getElementById('categoryname').style.color="black";
-//         }
-//        }
-    
-//        function checksize(){
-       
-//         const size = localStorage.getItem('size');
-//         if(size!=""){
-//             a++;
-//             document.getElementById('sizename').style.color='#42a2a2';
-//         }
-//         else if(size===""){
-//             document.getElementById('sizename').style.color="black";
-//         }
-//        }
-//        function checkcolor(){
-//         const color = localStorage.getItem('color');
-//         if(color!=""){
-//             a++;
-//             document.getElementById('colorname').style.color='#42a2a2';
-//         }
-//         else{
-//             document.getElementById('colorname').style.color="black";
-//         }
-//        }
-//        function checktype(){
-//         const type = localStorage.getItem('types');
-//         if(type!=""){
-//             a++;
-//             document.getElementById('typename').style.color='#42a2a2';
-//         }
-//         else {
-//             document.getElementById('typename').style.color="black";
-//         }
-    
-//        }
-//        function checkrating(){
-//         const rating = localStorage.getItem('rating');
-//         if(rating!=""){
-//             a++;
-//             document.getElementById('ratingname').style.color='#42a2a2';
-//         }
-//         else {
-//             document.getElementById('ratingname').style.color="black";
-//         }
-//        }
-//        checkcategory();
-//        checksize();
-//        checktype();
-//        checkrating();
-//        checkcolor();
-//        if(a>0){
-//         document.getElementById("clear").style.color="#42a2a2";
-//        }
-//        else{
-//         document.getElementById("clear").style.color='rgb(158 158 160)';
-//        }
-//     }
-
-
+document.getElementById("Brand")
