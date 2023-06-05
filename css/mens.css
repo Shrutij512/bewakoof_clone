@@ -11,12 +11,13 @@ body{
     text-rendering: optimizeLegibility;
     margin: auto;
     padding: 0;
-    width: 80%;
-    
+    width: 98%;
+    margin-top: 150px;
 }
 .curr_page{
     display: block;
     margin: auto;
+    
     width: 95%;
     padding:12px;
 }

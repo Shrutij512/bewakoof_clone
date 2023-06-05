@@ -300,7 +300,7 @@ function displayProducts(arr){
         box.setAttribute("id","box");
         
         var a=document.createElement("a");
-        a.href="details_page/details.html";
+        a.href="details.html";
         // localStorage.setItem("open_product",JSON.stringify(el));
         // console.log(el);
         a.addEventListener("click",openEl)
